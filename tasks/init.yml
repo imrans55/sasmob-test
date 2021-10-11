@@ -7,4 +7,4 @@
   copy:
     src: scripts/58/config.txt
     dest: /home/sasmob
-  when: host.stdout == 58
+  when: host.stdout == "58"
