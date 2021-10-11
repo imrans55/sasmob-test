@@ -3,7 +3,8 @@
   register: host
 
 - name: copy file if host name is same
+  become: yes
   copy:
     src: scripts/58/config.txt
-    dest: /home/jetson
+    dest: /home/sasmob
   when: host.stdout == 58
