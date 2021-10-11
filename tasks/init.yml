@@ -1,0 +1,9 @@
+- name: create a register
+  shell: hostname
+  register: host
+
+- name: copy file if host name is same
+  copy:
+    src: scripts/58/config.txt
+    dest: /home/jetson
+  when: host.stdout == 58
